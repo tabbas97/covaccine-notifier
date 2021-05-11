@@ -242,5 +242,5 @@ func getAvailableSessions(response []byte, age int) error {
 		return nil
 	}
 	log.Print("Found available slots, sending email")
-	return sendMail(email, password, buf.String())
+	return sendMail(email, password, age, buf.String())
 }
